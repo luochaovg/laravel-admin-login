@@ -1,6 +1,4 @@
 # laravel-admin-login
-
-laravel-admin login-captch
 ======
 
 Installation
