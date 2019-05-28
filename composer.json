@@ -1,9 +1,9 @@
 {
-    "name": "luochaovg/laravel-admin-login-captcha",
+    "name": "luochaovg/laravel-admin-login-yzm",
     "description": "laravel-admin 登录验证码",
     "type": "library",
     "keywords": ["laravel-admin", "extension", "login-captcha"],
-    "homepage": "https://github.com/luochaovg/laravel-admin-login",
+    "homepage": "https://github.com/luochaovg/laravel-admin-login-yzm",
     "license": "MIT",
     "authors": [
         {
@@ -12,7 +12,7 @@
         }
     ],
     "require": {
-        "luochaovg/laravel-admin-login-captcha": "dev-master",
+        "luochaovg/laravel-admin-login-yzm": "dev-master",
         "php": ">=7.0.0",
         "encore/laravel-admin": "~1.6",
         "mews/captcha": "^2.2"
