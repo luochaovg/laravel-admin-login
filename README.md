@@ -1,10 +1,10 @@
-# laravel-admin-login
+# laravel-admin-login-yzm
 ======
 
 Installation
 First, install dependencies:
 
-    composer require luochaovg/laravel-admin-login-captcha
+    composer require luochaovg/laravel-admin-login-yzm
  
 Configuration
  In the extensions section of the config/admin.php file, add some configuration that belongs to this extension.
