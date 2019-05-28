@@ -1,5 +1,5 @@
 {
-    "name": "luochaovg/laravel-admin-login",
+    "name": "luochaovg/laravel-admin-login-captcha",
     "description": "laravel-admin 登录验证码",
     "type": "library",
     "keywords": ["laravel-admin", "extension", "login-captcha"],
@@ -12,7 +12,7 @@
         }
     ],
     "require": {
-        "luochaovg/laravel-admin-login": "dev-master",
+        "luochaovg/laravel-admin-login-captcha": "dev-master",
         "php": ">=7.0.0",
         "encore/laravel-admin": "~1.6",
         "mews/captcha": "^2.2"
