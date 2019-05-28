@@ -12,6 +12,7 @@
         }
     ],
     "require": {
+        "luochaovg/laravel-admin-login": "dev-master",
         "php": ">=7.0.0",
         "encore/laravel-admin": "~1.6",
         "mews/captcha": "^2.2"
