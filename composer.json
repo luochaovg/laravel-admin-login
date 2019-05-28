@@ -5,6 +5,7 @@
     "keywords": ["laravel-admin", "extension", "login-captcha"],
     "homepage": "https://github.com/luochaovg/laravel-admin-login-yzm",
     "license": "MIT",
+    "version":"master",
     "authors": [
         {
             "name": "luochaovg",
