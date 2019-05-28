@@ -4,7 +4,7 @@
 Installation
 First, install dependencies:
 
-    composer require luochaovg/laravel-admin-login
+    composer require luochaovg/laravel-admin-login-captcha
  
 Configuration
  In the extensions section of the config/admin.php file, add some configuration that belongs to this extension.
