@@ -73,6 +73,18 @@
                     }
                 </script>
             </div>
+
+            <div class="form-group has-feedback {!! !$errors->has('onecode') ?: 'has-error' !!}">
+                @if($errors->has('onecode'))
+                    @foreach($errors->get('onecode') as $message)
+                        <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label><br>
+                    @endforeach
+                @endif
+
+                <input type="onecode" class="form-control" placeholder="Google Auth" name="onecode">
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+
             <div class="row">
                 <div class="col-xs-8">
                     @if(config('admin.auth.remember'))

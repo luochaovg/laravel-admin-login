@@ -2,6 +2,7 @@
 
 namespace Encore\James;
 
+use Earnp\GoogleAuthenticator\GoogleAuthenticator;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -50,6 +51,12 @@ class JamesController extends Controller
 
         unset($credentials['captcha']);
 
+        // google auth
+        $googleCheck = $this->googleAuth($request);
+        if ($googleCheck !== true) {
+            return back()->withInput()->withErrors($googleCheck);
+        }
+
         if ($this->guard()->attempt($credentials, $remember)) {
             return $this->sendLoginResponse($request);
         }
@@ -57,6 +64,31 @@ class JamesController extends Controller
         return back()->withInput()->withErrors([
             $this->username() => $this->getFailedLoginMessage(),
         ]);
+    }
+
+    /**
+     * @param $request
+     *
+     * @return array|bool
+     */
+    public function googleAuth($request)
+    {
+        if (empty($request->onecode) || strlen($request->onecode) != 6) {
+            return [
+                'onecode' => '请正确输入手机上google验证码',
+            ];
+        };
+
+        $account = $request->get('username');
+        $google =  google_secret($account);
+
+        if(GoogleAuthenticator::CheckCode($google, $request->onecode)) {
+            return true;
+        } else  {
+            return [
+                'onecode' => '请正确输入手机上google验证码',
+            ];
+        }
     }
 
     /**
