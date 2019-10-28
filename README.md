@@ -5,6 +5,8 @@ Installation
 First, install dependencies:
 
     composer require luochaovg/laravel-admin-login-yzm
+    composer require "earnp/laravel-google-authenticator:dev-master"
+    composer require simplesoftwareio/simple-qrcode 1.3.*
  
 Configuration
  In the extensions section of the config/admin.php file, add some configuration that belongs to this extension.
@@ -43,3 +45,5 @@ Configuration
       </tr>
 	</table>
 </div> 
+
+自己生成一个密码规则 google_secret
