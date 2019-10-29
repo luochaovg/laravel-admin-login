@@ -6,6 +6,7 @@ use Earnp\GoogleAuthenticator\GoogleAuthenticator;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
@@ -53,7 +54,8 @@ class JamesController extends Controller
 
         // google auth
         $googleCheck = $this->googleAuth($request);
-        if ($googleCheck !== true) {
+
+        if (Config::get('google.is_switch') && $googleCheck !== true) {
             return back()->withInput()->withErrors($googleCheck);
         }
 
