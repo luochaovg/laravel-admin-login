@@ -47,3 +47,4 @@ Configuration
 </div> 
 
 自己生成一个密码规则 google_secret
+is_swtch
